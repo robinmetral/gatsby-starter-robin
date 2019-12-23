@@ -23,8 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-
-// disable screenshots on failure
-Cypress.Screenshot.defaults({
-  screenshotOnRunFailure: false,
-})
