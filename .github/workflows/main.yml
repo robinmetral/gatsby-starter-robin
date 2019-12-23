@@ -20,5 +20,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn install
       - name: E2E
         run: yarn test:e2e
