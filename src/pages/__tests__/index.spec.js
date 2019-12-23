@@ -1,6 +1,6 @@
 import React from "react"
-import renderer from "react-test-renderer"
 import { useStaticQuery } from "gatsby"
+import { render } from "@testing-library/react"
 import Index from "../index"
 
 import indexStaticQuery from "./__fixtures__/indexStaticQuery"
@@ -10,8 +10,8 @@ beforeEach(() => {
 })
 
 describe("Index", () => {
-  it("renders correctly", () => {
-    const tree = renderer.create(<Index />).toJSON()
-    expect(tree).toMatchSnapshot()
+  it("matches snapshot", () => {
+    const index = render(<Index />)
+    expect(index).toMatchSnapshot()
   })
 })
