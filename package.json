@@ -19,11 +19,18 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-knobs": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "@testing-library/cypress": "^5.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.2.26",
     "cypress": "^3.8.0",
     "eslint": "^6.8.0",
@@ -60,7 +67,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e:open": "CYPRESS_SUPPORT=y yarn build && start-server-and-test serve http://localhost:9000 cy:open",
-    "test:e2e": "CYPRESS_SUPPORT=y yarn build && start-server-and-test serve http://localhost:9000 cy:run"
+    "test:e2e": "CYPRESS_SUPPORT=y yarn build && start-server-and-test serve http://localhost:9000 cy:run",
+    "storybook": "NODE_ENV=production start-storybook -s public -p 6006",
+    "build-storybook": "NODE_ENV=production build-storybook -s public"
   },
   "repository": {
     "type": "git",
