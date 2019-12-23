@@ -1,6 +1,6 @@
 context("Homepage", () => {
   beforeEach(() => {
-    cy.visit(`http://localhost:9000`)
+    cy.visit(`/`)
     cy.waitForRouteChange()
   })
 
