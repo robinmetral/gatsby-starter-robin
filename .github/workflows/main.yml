@@ -1,9 +1,9 @@
-name: CI
+name: Test
 
 on: [push]
 
 jobs:
-  test:
+  unit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -11,13 +11,17 @@ jobs:
         run: yarn install
       - name: Lint
         run: yarn lint
-      - name: Test
+      - name: Unit
         run: yarn test
-  build:
+
+  browser:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Install dependencies
-        run: yarn install
-      - name: Build
-        run: yarn build
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: E2E
+        uses: cypress-io/github-action@v1
+        with:
+          build: yarn build
+          start: yarn serve
+          wait-on: http://localhost:9000
