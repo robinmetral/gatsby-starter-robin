@@ -25,13 +25,15 @@ jobs:
       - name: E2E
         run: yarn test:e2e
       # upload failure screenshots
-      - uses: actions/upload-artifact@v1
+      - name: Upload failure screenshots
+        uses: actions/upload-artifact@v1
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
       # upload video recordings
-      - uses: actions/upload-artifact@v1
+      - name: Upload recordings
+        uses: actions/upload-artifact@v1
         if: always()
         with:
           name: cypress-videos
