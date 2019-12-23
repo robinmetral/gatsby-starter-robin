@@ -2,3 +2,4 @@ yarn.lock
 LICENSE
 public
 .cache
+storybook-static
