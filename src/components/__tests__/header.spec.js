@@ -1,12 +1,18 @@
 import React from "react"
-import renderer from "react-test-renderer"
+import { render } from "@testing-library/react"
 import Header from "../header"
 
 describe("Header", () => {
-  it("renders correctly", () => {
-    const tree = renderer
-      .create(<Header siteTitle="Default Starter" />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
+  it("renders the title", () => {
+    const { getByTestId } = render(
+      <Header siteTitle="Gatsby Default Starter" />
+    )
+
+    expect(getByTestId("title")).toHaveTextContent("Gatsby Default Starter")
+  })
+  it("matches snapshot", () => {
+    const header = render(<Header siteTitle="Default Starter" />)
+
+    expect(header).toMatchSnapshot()
   })
 })
