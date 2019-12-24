@@ -3,15 +3,14 @@
 exports[`Index matches snapshot 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .emotion-3 {
+  "baseElement": .emotion-4 {
   background: rebeccapurple;
-  margin-bottom: 1.45rem;
 }
 
 .emotion-2 {
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem;
 }
 
 .emotion-1 {
@@ -25,12 +24,6 @@ Object {
 }
 
 .emotion-5 {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
-}
-
-.emotion-4 {
   max-width: 300px;
   margin-bottom: 1.45rem;
 }
@@ -38,10 +31,10 @@ Object {
 <body>
     <div>
       <header
-        class="emotion-3"
+        class="emotion-4"
       >
         <div
-          class="emotion-2"
+          class="emotion-2 emotion-3"
         >
           <h1
             class="emotion-1"
@@ -57,7 +50,7 @@ Object {
         </div>
       </header>
       <div
-        class="emotion-5"
+        class="emotion-2 emotion-3"
       >
         <main>
           <h1>
@@ -70,7 +63,7 @@ Object {
             Now go build something great.
           </p>
           <div
-            class="emotion-4"
+            class="emotion-5"
           >
             <div
               class=" gatsby-image-wrapper"
@@ -131,15 +124,14 @@ Object {
       </div>
     </div>
   </body>,
-  "container": .emotion-3 {
+  "container": .emotion-4 {
   background: rebeccapurple;
-  margin-bottom: 1.45rem;
 }
 
 .emotion-2 {
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem;
 }
 
 .emotion-1 {
@@ -153,22 +145,16 @@ Object {
 }
 
 .emotion-5 {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
-}
-
-.emotion-4 {
   max-width: 300px;
   margin-bottom: 1.45rem;
 }
 
 <div>
     <header
-      class="emotion-3"
+      class="emotion-4"
     >
       <div
-        class="emotion-2"
+        class="emotion-2 emotion-3"
       >
         <h1
           class="emotion-1"
@@ -184,7 +170,7 @@ Object {
       </div>
     </header>
     <div
-      class="emotion-5"
+      class="emotion-2 emotion-3"
     >
       <main>
         <h1>
@@ -197,7 +183,7 @@ Object {
           Now go build something great.
         </p>
         <div
-          class="emotion-4"
+          class="emotion-5"
         >
           <div
             class=" gatsby-image-wrapper"

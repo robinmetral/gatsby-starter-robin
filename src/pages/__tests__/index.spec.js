@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
-import { render } from "@testing-library/react"
-import Index from "../index"
+import { render } from "test-utils"
+import IndexPage from "../index"
 
 import indexStaticQuery from "./__fixtures__/indexStaticQuery"
 
@@ -11,7 +11,7 @@ beforeEach(() => {
 
 describe("Index", () => {
   it("matches snapshot", () => {
-    const index = render(<Index />)
+    const index = render(<IndexPage />)
     expect(index).toMatchSnapshot()
   })
 })

@@ -3,20 +3,15 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
+import Column from "../Column"
+
 const Header = ({ siteTitle }) => (
   <header
-    css={css`
-      background: rebeccapurple;
-      margin-bottom: 1.45rem;
+    css={theme => css`
+      background: ${theme.colors.primary};
     `}
   >
-    <div
-      css={css`
-        margin: 0 auto;
-        max-width: 960px;
-        padding: 1.45rem 1.0875rem;
-      `}
-    >
+    <Column>
       <h1
         css={css`
           margin: 0;
@@ -25,15 +20,15 @@ const Header = ({ siteTitle }) => (
       >
         <Link
           to="/"
-          css={css`
-            color: white;
+          css={theme => css`
+            color: ${theme.colors.white};
             text-decoration: none;
           `}
         >
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </Column>
   </header>
 )
 
