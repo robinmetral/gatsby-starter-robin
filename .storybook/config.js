@@ -1,6 +1,15 @@
+import React from "react"
 import { configure, addDecorator } from "@storybook/react"
 import { withKnobs } from "@storybook/addon-knobs"
 import { action } from "@storybook/addon-actions"
+import { ThemeProvider } from "emotion-theming"
+
+import theme from "../src/theme"
+
+// add knobs decorator globally
+addDecorator(withKnobs)
+// add the theme decorator
+addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
 
 // automatically import all files ending in *.stories.js
 configure(require.context("../src", true, /\.stories\.js$/), module)
@@ -18,6 +27,3 @@ global.__PATH_PREFIX__ = ""
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
-
-// add knobs decorator globally
-addDecorator(withKnobs)

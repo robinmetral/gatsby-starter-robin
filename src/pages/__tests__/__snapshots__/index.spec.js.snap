@@ -3,21 +3,46 @@
 exports[`Index matches snapshot 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-4 {
+  background: rebeccapurple;
+}
+
+.emotion-2 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem;
+}
+
+.emotion-1 {
+  margin: 0;
+}
+
+.emotion-0 {
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-5 {
+  max-width: 300px;
+  margin-bottom: 1.45rem;
+}
+
+<body>
     <div>
       <header
-        style="background: rebeccapurple; margin-bottom: 1.45rem;"
+        class="emotion-4"
       >
         <div
-          style="margin: 0px auto; max-width: 960px; padding: 1.45rem 1.0875rem;"
+          class="emotion-2 emotion-3"
         >
           <h1
+            class="emotion-1"
             data-testid="title"
-            style="margin: 0px;"
           >
             <a
+              class="emotion-0"
               href="/"
-              style="color: white; text-decoration: none;"
             >
               Gatsby Default Starter
             </a>
@@ -25,7 +50,7 @@ Object {
         </div>
       </header>
       <div
-        style="margin: 0px auto; max-width: 960px; padding: 0px 1.0875rem 1.45rem 1.0875rem;"
+        class="emotion-2 emotion-3"
       >
         <main>
           <h1>
@@ -38,7 +63,7 @@ Object {
             Now go build something great.
           </p>
           <div
-            style="max-width: 300px; margin-bottom: 1.45rem;"
+            class="emotion-5"
           >
             <div
               class=" gatsby-image-wrapper"
@@ -99,20 +124,45 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-4 {
+  background: rebeccapurple;
+}
+
+.emotion-2 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem;
+}
+
+.emotion-1 {
+  margin: 0;
+}
+
+.emotion-0 {
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-5 {
+  max-width: 300px;
+  margin-bottom: 1.45rem;
+}
+
+<div>
     <header
-      style="background: rebeccapurple; margin-bottom: 1.45rem;"
+      class="emotion-4"
     >
       <div
-        style="margin: 0px auto; max-width: 960px; padding: 1.45rem 1.0875rem;"
+        class="emotion-2 emotion-3"
       >
         <h1
+          class="emotion-1"
           data-testid="title"
-          style="margin: 0px;"
         >
           <a
+            class="emotion-0"
             href="/"
-            style="color: white; text-decoration: none;"
           >
             Gatsby Default Starter
           </a>
@@ -120,7 +170,7 @@ Object {
       </div>
     </header>
     <div
-      style="margin: 0px auto; max-width: 960px; padding: 0px 1.0875rem 1.45rem 1.0875rem;"
+      class="emotion-2 emotion-3"
     >
       <main>
         <h1>
@@ -133,7 +183,7 @@ Object {
           Now go build something great.
         </p>
         <div
-          style="max-width: 300px; margin-bottom: 1.45rem;"
+          class="emotion-5"
         >
           <div
             class=" gatsby-image-wrapper"
