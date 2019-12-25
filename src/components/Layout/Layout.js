@@ -9,10 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Seo from "../Seo"
 import Header from "../Header"
 import Column from "../Column"
 
-const Layout = ({ children }) => {
+const Layout = ({ pageContext: { frontmatter }, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Seo title={frontmatter.title} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <Column>
         <main>{children}</main>
@@ -39,6 +41,9 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
+  frontmatter: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }).isRequired,
   children: PropTypes.node.isRequired,
 }
 
