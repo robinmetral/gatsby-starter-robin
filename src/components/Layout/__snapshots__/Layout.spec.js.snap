@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should match the snapshots 1`] = `
+exports[`Layout should match the snapshots 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-4 {
@@ -39,11 +39,31 @@ Object {
               class="emotion-0"
               href="/"
             >
-              Default Starter
+              Gatsby Default Starter
             </a>
           </h1>
         </div>
       </header>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <main>
+          <div>
+            Page content
+          </div>
+        </main>
+        <footer>
+          © 
+          2019
+          , Built with
+           
+          <a
+            href="https://www.gatsbyjs.org"
+          >
+            Gatsby
+          </a>
+        </footer>
+      </div>
     </div>
   </body>,
   "container": .emotion-4 {
@@ -81,11 +101,31 @@ Object {
             class="emotion-0"
             href="/"
           >
-            Default Starter
+            Gatsby Default Starter
           </a>
         </h1>
       </div>
     </header>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <main>
+        <div>
+          Page content
+        </div>
+      </main>
+      <footer>
+        © 
+        2019
+        , Built with
+         
+        <a
+          href="https://www.gatsbyjs.org"
+        >
+          Gatsby
+        </a>
+      </footer>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
