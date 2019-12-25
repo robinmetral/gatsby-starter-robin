@@ -13,6 +13,7 @@ Gatsby Default Starter with state-of-the-art tooling :art:
 - :nail_care: Linting with [ESLint](https://github.com/eslint/eslint) and [Prettier](https://github.com/prettier/prettier)
 - :memo: Unit and integration tests with [Jest](https://github.com/facebook/jest) and [RTL](https://github.com/testing-library/react-testing-library)
 - :100: E2E browser tests with with [Cypress](https://github.com/cypress-io/cypress)
+- :notebook: Visual testing with [Storybook](https://github.com/storybookjs/storybook)
 
 ## CI/CD that just works
 
