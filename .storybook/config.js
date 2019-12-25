@@ -5,11 +5,17 @@ import { action } from "@storybook/addon-actions"
 import { ThemeProvider } from "emotion-theming"
 
 import theme from "../src/theme"
+import GlobalStyles from "../src/components/GlobalStyles"
 
 // add knobs decorator globally
 addDecorator(withKnobs)
 // add the theme decorator
-addDecorator(story => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)
+addDecorator(storyFn => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    {storyFn()}
+  </ThemeProvider>
+))
 
 // automatically import all files ending in *.stories.js
 configure(require.context("../src", true, /\.stories\.js$/), module)
