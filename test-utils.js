@@ -6,9 +6,15 @@ import { render } from "@testing-library/react"
 import { ThemeProvider } from "emotion-theming"
 
 import theme from "./src/theme"
+import GlobalStyles from "./src/components/GlobalStyles"
 
 const ThemeWrapper = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {children}
+    </ThemeProvider>
+  )
 }
 
 const customRender = (ui, options) =>

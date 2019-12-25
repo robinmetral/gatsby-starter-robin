@@ -1,6 +1,7 @@
-import { css } from "@emotion/core"
+import React from "react"
+import { css, Global } from "@emotion/core"
 
-export default css`
+const globalStyles = css`
   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -624,3 +625,7 @@ export default css`
     }
   }
 `
+
+const GlobalStyles = () => <Global styles={globalStyles} />
+
+export default GlobalStyles

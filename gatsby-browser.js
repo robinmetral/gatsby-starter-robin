@@ -3,11 +3,11 @@ import { ThemeProvider } from "emotion-theming"
 import { Global } from "@emotion/core"
 
 import theme from "./src/theme"
-import GlobalStyles from "./src/GlobalStyles"
+import GlobalStyles from "./src/components/GlobalStyles"
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
-    <Global styles={GlobalStyles} />
+    <GlobalStyles />
     {element}
   </ThemeProvider>
 )
