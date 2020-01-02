@@ -3,3 +3,4 @@ LICENSE
 public
 .cache
 storybook-static
+env.*
