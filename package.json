@@ -57,6 +57,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-emotion": "^10.0.27",
+    "lint-staged": "^10.0.0-beta.14",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
     "start-server-and-test": "^1.10.6"
@@ -68,13 +69,15 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "npm-run-all --continue-on-error -p lint:js lint:prettier",
-    "lint:js": "eslint --ignore-path .gitignore --ext .js,.jsx .",
-    "lint:prettier": "yarn prettier --check *",
+    "lint:fix": "npm-run-all --continue-on-error -p lint:js:fix lint:prettier:fix",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path .gitignore",
+    "lint:js:fix": "eslint --ext .js,.jsx . --ignore-path .gitignore --fix",
+    "lint:prettier": "prettier \"**/*.{js,jsx,json,md,yml,yaml}\" --ignore-path .gitignore --check",
+    "lint:prettier:fix": "prettier \"**/*.{js,jsx,json,md,yml,yaml}\" --ignore-path .gitignore --write",
     "test": "jest --all --no-cache",
     "test:watch": "jest --watch",
     "cy:open": "cypress open",
@@ -86,7 +89,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
   },
   "repository": {
@@ -95,5 +99,13 @@
   },
   "bugs": {
     "url": "https://github.com/robinmetral/gatsby-starter-robin/issues"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }
