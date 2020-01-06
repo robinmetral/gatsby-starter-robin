@@ -18,6 +18,7 @@
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.3.5",
+    "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-sharp": "^2.3.7",
     "prop-types": "^15.7.2",
@@ -60,7 +61,8 @@
     "lint-staged": "^10.0.0-beta.14",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
-    "start-server-and-test": "^1.10.6"
+    "start-server-and-test": "^1.10.6",
+    "typescript": "^3.7.4"
   },
   "keywords": [
     "gatsby"
@@ -72,6 +74,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "type-check": "tsc",
     "lint": "npm-run-all --continue-on-error -p lint:js lint:prettier",
     "lint:fix": "npm-run-all --continue-on-error -p lint:js:fix lint:prettier:fix",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path .gitignore",
