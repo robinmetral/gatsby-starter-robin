@@ -7,7 +7,11 @@
     "strict": true,
     "noEmit": true,
     "isolatedModules": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "test-utils": ["../test-utils"]
+    }
   },
   "exclude": ["node_modules", "public", ".cache"]
 }
